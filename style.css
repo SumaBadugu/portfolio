@@ -1,0 +1,174 @@
+
+ /* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #1f3b4d;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1f3b4d;
+  font-size: 2rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+/* ===== Home Section ===== */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.main-content h1 {
+  font-size: 2.5rem;
+  color: #1f3b4d;
+}
+
+.main-content p.title {
+  font-weight: bold;
+  color: #444;
+  margin-top: 10px;
+}
+
+.main-image {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.main-image img {
+  width: 220px;
+  border-radius:40%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== Skills, Education, Certificates ===== */
+.skills ul,
+.edu ul,
+.certificates ul,
+.activities ul {
+  padding-left: 20px;
+}
+
+.skills li,
+.edu li,
+.certificates li,
+.activities li {
+  margin-bottom: 10px;
+}
+
+/* ===== Projects Section ===== */
+.projects  {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding : 60px 20px;
+}
+
+.card{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 40px 10px rgba(0,0,0,0.01);
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-3px);
+}
+
+.projects ul {
+  padding-left: 20px;
+  font-size: 0.95rem;
+}
+
+/* ===== Contact Section ===== */
+.contact {
+    
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1f3b4d;
+}
+
+.contact a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+  
+}
+
+.contact a:hover {
+  color: #ffcc00;
+}
+
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .projects > div {
+    grid-template-columns: 1fr;
+  }
+}
